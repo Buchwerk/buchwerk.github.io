@@ -1,0 +1,134 @@
+/* Layout: ein Bücherregal als Bühne – jede App ist ein Buchrücken, darunter die Bände im Detail, am Ende ein Kolophon. */
+:root {
+  --paper: #F3F4F7;
+  --leaf: #FFFFFF;
+  --ink: #1C2E4A;
+  --ink-soft: #4A5870;
+  --rule: #D5DAE3;
+  --ear: #D99A22;
+  --ear-ink: #7A5410;
+  --shelf: #C9CFDA;
+  --font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1726; --leaf: #162236; --ink: #E6E9F0; --ink-soft: #A3AEC2;
+    --rule: #2A3850; --ear: #E8AE3C; --ear-ink: #F2C875; --shelf: #2A3850;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1726; --leaf: #162236; --ink: #E6E9F0; --ink-soft: #A3AEC2;
+  --rule: #2A3850; --ear: #E8AE3C; --ear-ink: #F2C875; --shelf: #2A3850;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+img, svg { max-width: 100%; }
+body {
+  margin: 0;
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65;
+  padding-inline: 20px;
+}
+.wrap { max-width: 1040px; margin-inline: auto; }
+a { color: inherit; }
+a:focus-visible, .spine:focus-visible { outline: 3px solid var(--ear); outline-offset: 3px; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 24px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand svg { width: 40px; height: 40px; flex: none; }
+.brand b { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.01em; }
+.brand span { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); }
+nav { display: flex; gap: 20px; font-family: var(--font-display); font-size: 0.95rem; }
+nav a { text-decoration: none; color: var(--ink-soft); }
+nav a:hover { color: var(--ink); }
+
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: end; padding-block: 56px 24px; }
+.hero > * { min-width: 0; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--ear-ink); text-transform: uppercase; margin: 0 0 16px; }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 24px; text-wrap: balance; }
+h1 em { font-style: normal; font-weight: 400; color: var(--ink-soft); }
+.lede { max-width: 34em; margin: 0; color: var(--ink-soft); font-size: 1.15rem; }
+
+.shelf { display: flex; align-items: flex-end; gap: 6px; padding-inline: 12px; border-bottom: 10px solid var(--shelf); min-height: 300px; }
+.spine {
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+  width: 64px; padding-block: 16px; border-radius: 4px 4px 0 0; text-decoration: none;
+  transition: transform .25s ease;
+}
+.spine:hover { transform: translateY(-10px); }
+.spine .t { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: 0.01em; }
+.spine .band { font-family: var(--font-mono); font-size: 0.7rem; }
+.spine.haus { height: 250px; background: #7B3F2C; color: #F6E7DD; }
+.spine.therme { height: 286px; background: #12474A; color: #DCAF45; width: 72px; }
+.spine.plan { height: 228px; background: transparent; color: var(--ink-soft); border: 2px dashed var(--ink-soft); border-bottom: 0; }
+.spine.end { width: 22px; height: 180px; background: var(--ear); padding: 0; margin-left: 10px; border-radius: 2px 2px 0 0; transform: skewX(-8deg); transform-origin: bottom; }
+@media (prefers-reduced-motion: reduce) { .spine { transition: none; } .spine:hover { transform: none; } }
+
+section { padding-block: 72px 24px; }
+h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 2.4rem); letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 12px; text-wrap: balance; }
+.sub { color: var(--ink-soft); margin: 0 0 40px; max-width: 38em; }
+
+.volumes { display: grid; gap: 20px; }
+.vol {
+  position: relative; display: grid; grid-template-columns: 96px 1fr; gap: 28px;
+  background: var(--leaf); border: 1px solid var(--rule); padding: 32px; border-radius: 6px;
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+}
+.vol::after { content: ""; position: absolute; top: 0; right: 0; width: 28px; height: 28px; background: linear-gradient(225deg, transparent 50%, var(--rule) 50%); }
+.vol > div { min-width: 0; }
+.vol .icon { width: 96px; height: 96px; border-radius: 22px; overflow: hidden; }
+.vol .icon svg { width: 100%; height: 100%; display: block; }
+.vol h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 4px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0 0 14px; }
+.chip { font-family: var(--font-mono); font-size: 0.75rem; padding: 3px 10px; border-radius: 999px; border: 1px solid currentColor; color: var(--ear-ink); }
+.chip.wip { color: var(--ink-soft); border-style: dashed; }
+.pkg { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-soft); overflow-wrap: anywhere; }
+.vol p { margin: 0 0 14px; max-width: 40em; }
+.vol ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.vol li { font-family: var(--font-display); font-size: 0.9rem; background: var(--paper); padding: 4px 12px; border-radius: 4px; }
+.vol.wip { background: transparent; border-style: dashed; }
+
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.rules > div { min-width: 0; border-top: 2px solid var(--ink); padding-top: 16px; }
+.rules h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; margin: 0 0 8px; }
+.rules p { margin: 0; color: var(--ink-soft); }
+
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.mail { font-family: var(--font-mono); font-size: 1.1rem; background: var(--leaf); border: 1px solid var(--rule); padding: 10px 16px; border-radius: 6px; user-select: all; }
+button.copy { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; background: var(--ink); color: var(--paper); border: 0; padding: 11px 18px; border-radius: 6px; cursor: pointer; }
+button.copy:focus-visible { outline: 3px solid var(--ear); outline-offset: 2px; }
+
+footer { margin-top: 88px; padding-block: 28px 40px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 2fr 1fr; gap: 24px; font-size: 0.9rem; color: var(--ink-soft); }
+footer > * { min-width: 0; }
+footer h4 { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 8px; color: var(--ink); font-weight: 500; }
+footer p { margin: 0; max-width: 40em; }
+footer .links { display: flex; flex-direction: column; gap: 4px; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 40px; padding-block: 32px 16px; }
+  .shelf { min-height: 0; }
+  .rules { grid-template-columns: 1fr; gap: 24px; }
+  .vol { grid-template-columns: 1fr; gap: 18px; padding: 24px; }
+  .vol .icon { width: 72px; height: 72px; border-radius: 16px; }
+  footer { grid-template-columns: 1fr; }
+  nav { gap: 16px; }
+}
+@media (max-width: 400px) {
+  .spine { width: 52px; } .spine.therme { width: 58px; }
+  .spine .t { font-size: 1rem; }
+}
+
+/* Rechtstexte: Impressum, Datenschutz */
+.legal { max-width: 44em; padding-block: 48px 24px; }
+.legal h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 32px; }
+.legal h2 { font-size: 1.35rem; margin: 40px 0 8px; }
+.legal p, .legal ul { margin: 0 0 14px; }
+.legal ul { padding-left: 1.2em; }
+.legal address { font-style: normal; margin: 0 0 14px; }
+.legal .stand { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); }
+.back { font-family: var(--font-display); text-decoration: none; color: var(--ink-soft); }
+.back:hover { color: var(--ink); }

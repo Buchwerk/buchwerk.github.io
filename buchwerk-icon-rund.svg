@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Buchwerk Labs">
+  <title>Buchwerk Labs</title>
+  <defs><clipPath id="bw-rund"><rect width="1024" height="1024" rx="224"/></clipPath></defs>
+  <g clip-path="url(#bw-rund)">
+    <rect width="1024" height="1024" fill="#1C2E4A"/>
+    <path d="M724 0 H1024 V300 Z" fill="#0E1A2E"/>
+    <path d="M724 0 V300 H1024 Z" fill="#DDE2EA"/>
+    <g stroke-linecap="round" fill="none">
+      <path d="M 232 513 H 600" stroke="#F3F4F7" stroke-width="52" opacity=".9"/>
+      <path d="M 682 482 V 544" stroke="#E8A72C" stroke-width="32"/>
+      <path d="M 232 627 H 792" stroke="#F3F4F7" stroke-width="52" opacity=".42"/>
+      <path d="M 232 741 H 792" stroke="#F3F4F7" stroke-width="52" opacity=".24"/>
+    </g>
+  </g>
+</svg>
