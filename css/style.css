@@ -62,7 +62,7 @@ h1 em { font-style: normal; font-weight: 400; color: var(--ink-soft); }
 .spine:hover { transform: translateY(-10px); }
 .spine .t { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: 0.01em; }
 .spine .band { font-family: var(--font-mono); font-size: 0.7rem; }
-.spine.haus { height: 250px; background: #7B3F2C; color: #F6E7DD; }
+.spine.haus { height: 250px; background: #2c6244; color: #cfab54; }
 .spine.therme { height: 286px; background: #12474A; color: #DCAF45; width: 72px; }
 .spine.plan { height: 228px; background: transparent; color: var(--ink-soft); border: 2px dashed var(--ink-soft); border-bottom: 0; }
 .spine.end { width: 22px; height: 180px; background: var(--ear); padding: 0; margin-left: 10px; border-radius: 2px 2px 0 0; transform: skewX(-8deg); transform-origin: bottom; }
