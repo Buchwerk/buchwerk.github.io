@@ -33,4 +33,4 @@ Fonts, Teilmengen `latin` und `latin-ext`.
 
 Jede App kann eine eigene Seite unter `<app>.buchwerk.dev` bekommen: eigenes
 Repo mit Pages, darin eine `CNAME`-Datei mit der Subdomain, und beim
-Domain-Anbieter ein DNS-Eintrag `CNAME <app>` → `buchwerk-labs.github.io`.
+Domain-Anbieter ein DNS-Eintrag `CNAME <app>` → `buchwerk.github.io`.
