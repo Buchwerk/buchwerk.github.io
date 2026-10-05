@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Buchwerk Labs</title>
-<meta name="description" content="Buchwerk Labs baut kleine Apps zum Buchführen: Hausbuch, Thermenbuch und bald Planungsbuch.">
+<meta name="description" content="Buchwerk Labs baut kleine Apps und Werkzeuge: Hausbuch, Thermenbuch, loxmatter und bald Planungsbuch.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3CclipPath id='r'%3E%3Crect width='1024' height='1024' rx='224'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url%28%23r%29'%3E%3Crect width='1024' height='1024' fill='%231C2E4A'/%3E%3Cpath d='M724 0 H1024 V300 Z' fill='%230E1A2E'/%3E%3Cpath d='M724 0 V300 H1024 Z' fill='%23DDE2EA'/%3E%3Cg stroke-linecap='round' fill='none'%3E%3Cpath d='M232 513 H600' stroke='%23F3F4F7' stroke-width='52' opacity='.9'/%3E%3Cpath d='M682 482 V544' stroke='%23E8A72C' stroke-width='32'/%3E%3Cpath d='M232 627 H792' stroke='%23F3F4F7' stroke-width='52' opacity='.42'/%3E%3Cpath d='M232 741 H792' stroke='%23F3F4F7' stroke-width='52' opacity='.24'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
@@ -28,19 +28,20 @@
       <div>
         <p class="eyebrow">buchwerk.dev</p>
         <h1>Apps für alles, worüber man <em>Buch führt.</em></h1>
-        <p class="lede">Buchwerk Labs baut kleine, sorgfältige Apps für iPhone, Android und den Browser. Jede hat eine Aufgabe und erledigt sie gut: die Vermietung, die Thermenbesuche, die nächsten Pläne.</p>
+        <p class="lede">Buchwerk Labs baut kleine, sorgfältige Apps und Werkzeuge für iPhone, Android, den Browser und das eigene Smart Home. Jedes hat eine Aufgabe und erledigt sie gut: die Vermietung, die Thermenbesuche, das Haus mit Loxone, die nächsten Pläne.</p>
       </div>
       <div class="shelf" role="list" aria-label="Unsere Apps im Regal">
         <a class="spine haus" href="#hausbuch" role="listitem"><span class="t">Hausbuch</span><span class="band">I</span></a>
         <a class="spine therme" href="#thermenbuch" role="listitem"><span class="t">Thermenbuch</span><span class="band">II</span></a>
-        <a class="spine plan" href="#planungsbuch" role="listitem"><span class="t">Planungsbuch</span><span class="band">III</span></a>
+        <a class="spine lox" href="#loxmatter" role="listitem"><span class="t">loxmatter</span><span class="band">III</span></a>
+        <a class="spine plan" href="#planungsbuch" role="listitem"><span class="t">Planungsbuch</span><span class="band">IV</span></a>
         <span class="spine end" aria-hidden="true"></span>
       </div>
     </div>
 
     <section id="apps">
       <h2>Die Bände</h2>
-      <p class="sub">Drei Bücher, ein Anspruch: aufräumen, was sonst auf Zetteln, in Ordnern und im Kopf verstreut liegt.</p>
+      <p class="sub">Vier Bände, ein Anspruch: aufräumen, was sonst auf Zetteln, in Ordnern und im Kopf verstreut liegt.</p>
 
       <div class="volumes">
         <article class="vol" id="hausbuch">
@@ -67,6 +68,18 @@
           </div>
         </article>
 
+        <article class="vol" id="loxmatter">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 512 512"><rect width="512" height="512" fill="#a15a2c"/><g stroke="#f6ece3" stroke-width="22" stroke-linecap="round"><path d="M256 256 L406 256"/><path d="M256 256 L331 386"/><path d="M256 256 L181 386"/><path d="M256 256 L106 256"/><path d="M256 256 L181 126"/><path d="M256 256 L331 126"/></g><g fill="#f6ece3"><circle cx="256" cy="256" r="46"/><circle cx="406" cy="256" r="25"/><circle cx="331" cy="386" r="25"/><circle cx="181" cy="386" r="25"/><circle cx="106" cy="256" r="25"/><circle cx="181" cy="126" r="25"/><circle cx="331" cy="126" r="25"/></g></svg>
+          </div>
+          <div>
+            <h3><a href="https://github.com/lucienkerl/loxmatter">loxmatter</a></h3>
+            <div class="meta"><span class="chip">Open Source, selbst gehostet</span><a class="pkg" href="https://github.com/lucienkerl/loxmatter">github.com/lucienkerl/loxmatter</a></div>
+            <p>Matter-Geräte im Loxone Miniserver, ohne Cloud. Die Bridge läuft auf einem Raspberry Pi oder einem Linux-Server, nimmt Matter-, Thread- und Zigbee-Geräte direkt im Browser auf und erzeugt die passenden Loxone-Ein- und -Ausgänge, statt dass du sie in Loxone Config von Hand anlegst.</p>
+            <ul><li>Matter und Thread</li><li>Zigbee</li><li>Loxone-Vorlagen</li><li>Projektdatei-Abgleich</li></ul>
+          </div>
+        </article>
+
         <article class="vol wip" id="planungsbuch">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 96 96"><rect x="2" y="2" width="92" height="92" rx="20" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="7 6" opacity=".55"/><path d="M30 34 H66 M30 48 H58 M30 62 H50" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity=".55"/></svg>
@@ -86,7 +99,7 @@
       <div class="rules">
         <div><h3>Eine Aufgabe pro App</h3><p>Lieber ein schmales Buch, das man gern aufschlägt, als ein dickes, das im Regal verstaubt.</p></div>
         <div><h3>Keine Werbung, kein Tracking</h3><p>Deine Einträge gehören dir. Daten werden nur erhoben, wenn die App sie für eine Funktion braucht.</p></div>
-        <div><h3>Gebaut in Deutschland</h3><p>Entwickelt von einer Person mit Freude am Detail, für iPhone und Android aus einer gemeinsamen Codebasis.</p></div>
+        <div><h3>Gebaut in Deutschland</h3><p>Entwickelt von einer Person mit Freude am Detail, für das Handy, den Browser und den eigenen Server.</p></div>
       </div>
     </section>
 

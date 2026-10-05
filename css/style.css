@@ -64,6 +64,7 @@ h1 em { font-style: normal; font-weight: 400; color: var(--ink-soft); }
 .spine .band { font-family: var(--font-mono); font-size: 0.7rem; }
 .spine.haus { height: 250px; background: #2c6244; color: #cfab54; }
 .spine.therme { height: 286px; background: #12474A; color: #DCAF45; width: 72px; }
+.spine.lox { height: 236px; background: #a15a2c; color: #f6ece3; }
 .spine.plan { height: 228px; background: transparent; color: var(--ink-soft); border: 2px dashed var(--ink-soft); border-bottom: 0; }
 .spine.end { width: 22px; height: 180px; background: var(--ear); padding: 0; margin-left: 10px; border-radius: 2px 2px 0 0; transform: skewX(-8deg); transform-origin: bottom; }
 @media (prefers-reduced-motion: reduce) { .spine { transition: none; } .spine:hover { transform: none; } }
