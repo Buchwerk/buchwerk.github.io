@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- Google-Play-Kopfzeilenbild (4096x2304): Hero der Website in den dunklen Farben.
+     Buehne 1024x576 CSS-Pixel, gerendert mit Faktor 4, danach als JPEG gespeichert:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+       --force-device-scale-factor=4 --window-size=1024,576 --screenshot=header.png file://$PWD/store/playstore-header.html -->
+
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/fonts.css">
+<style>
+  :root {
+    --paper: #0F1726; --ink: #E6E9F0; --ink-soft: #A3AEC2;
+    --ear: #E8AE3C; --ear-ink: #F2C875; --shelf: #2A3850;
+    --font-display: "Bricolage Grotesque", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+  html, body { margin: 0; width: 1024px; height: 576px; overflow: hidden; background: var(--paper); color: var(--ink); }
+  .stage {
+    width: 1024px; height: 576px; box-sizing: border-box; padding-inline: 112px;
+    display: grid; grid-template-columns: 1fr auto; gap: 72px; align-items: center;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .brand svg { width: 40px; height: 40px; border-radius: 9px; }
+  .brand b { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.01em; }
+  .brand span { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; color: var(--ink-soft); }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: 3.4rem; line-height: 0.98; letter-spacing: -0.035em; margin: 0; }
+  h1 em { font-style: normal; font-weight: 400; color: var(--ink-soft); }
+  .shelf { display: flex; align-items: flex-end; gap: 6px; padding-inline: 12px; border-bottom: 10px solid var(--shelf); }
+  .spine {
+    display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-sizing: border-box;
+    width: 64px; padding-block: 16px; border-radius: 4px 4px 0 0;
+  }
+  .spine .t { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: 0.01em; }
+  .spine .band { font-family: var(--font-mono); font-size: 0.7rem; }
+  .spine.haus { height: 250px; background: #2c6244; color: #cfab54; }
+  .spine.therme { height: 286px; background: #12474A; color: #DCAF45; width: 72px; }
+  .spine.lox { height: 236px; background: #a15a2c; color: #f6ece3; }
+  .spine.plan { height: 228px; color: var(--ink-soft); border: 2px dashed var(--ink-soft); border-bottom: 0; }
+  .spine.end { width: 22px; height: 180px; background: var(--ear); padding: 0; margin-left: 10px; border-radius: 2px 2px 0 0; transform: skewX(-8deg); transform-origin: bottom; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div>
+    <div class="brand">
+      <svg viewBox="0 0 1024 1024" aria-hidden="true"><rect width="1024" height="1024" fill="#1C2E4A"/><path d="M724 0 H1024 V300 Z" fill="#0E1A2E"/><path d="M724 0 V300 H1024 Z" fill="#DDE2EA"/><g stroke-linecap="round" fill="none"><path d="M232 513 H600" stroke="#F3F4F7" stroke-width="52" opacity=".9"/><path d="M682 482 V544" stroke="#E8A72C" stroke-width="32"/><path d="M232 627 H792" stroke="#F3F4F7" stroke-width="52" opacity=".42"/><path d="M232 741 H792" stroke="#F3F4F7" stroke-width="52" opacity=".24"/></g></svg>
+      <b>Buchwerk</b><span>Labs</span>
+    </div>
+    <h1>Apps für alles, worüber man <em>Buch führt.</em></h1>
+  </div>
+  <div class="shelf">
+    <div class="spine haus"><span class="t">Hausbuch</span><span class="band">I</span></div>
+    <div class="spine therme"><span class="t">Thermenbuch</span><span class="band">II</span></div>
+    <div class="spine lox"><span class="t">loxmatter</span><span class="band">III</span></div>
+    <div class="spine plan"><span class="t">Planungsbuch</span><span class="band">IV</span></div>
+    <span class="spine end"></span>
+  </div>
+</div>
+</body>
+</html>
