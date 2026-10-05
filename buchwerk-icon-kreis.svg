@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Buchwerk Labs">
+  <title>Buchwerk Labs</title>
+  <desc>Profilbild-Variante fuer kreisfoermige Ausschnitte: die Buchseite aus
+        buchwerk-icon.svg auf 66 % verkleinert und mittig gesetzt, damit das
+        Eselsohr im Kreis vollstaendig sichtbar bleibt.</desc>
+  <rect width="1024" height="1024" fill="#0E1A2E"/>
+  <g transform="translate(512 512) scale(.66) translate(-512 -512)">
+    <path d="M0 0 H724 L1024 300 V1024 H0 Z" fill="#1C2E4A"/>
+    <path d="M724 0 V300 H1024 Z" fill="#DDE2EA"/>
+    <g stroke-linecap="round" fill="none">
+      <path d="M 232 513 H 600" stroke="#F3F4F7" stroke-width="52" opacity=".9"/>
+      <path d="M 682 482 V 544" stroke="#E8A72C" stroke-width="32"/>
+      <path d="M 232 627 H 792" stroke="#F3F4F7" stroke-width="52" opacity=".42"/>
+      <path d="M 232 741 H 792" stroke="#F3F4F7" stroke-width="52" opacity=".24"/>
+    </g>
+  </g>
+</svg>
